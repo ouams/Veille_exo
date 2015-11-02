@@ -15,7 +15,7 @@ void main(){
 			var num = int.parse(input.value);
 			
 			if(num > myNumber)
-			display_result("C'est moins !");
+				display_result("C'est moins !");
 
 			else if(num < myNumber)
 				display_result("C'est plus !");
