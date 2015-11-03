@@ -2,8 +2,8 @@ import 'dart:html';
 
 
 InputElement input = querySelector("input[name='todo']");
-UListElement ul = querySelector('.elements');
-List buttons = querySelectorAll('button');
+UListElement ul = //ToDO
+List buttons = //ToDO
 
 
 void main(){
@@ -18,15 +18,16 @@ void main(){
 
 void append_to_list(message){
 	ButtonElement button = new ButtonElement()..text = 'X';
-	button.addEventListener('click',  (event) => delete_element(event.target), false);
+	//Event 'click'
+	button.addEventListener();
 
-	LIElement li = new LIElement() ..text = message + '  '
-					..append(button);
+	
+	LIElement li = new LIElement() //Append message with a new button
+
 	ul.children.add(li);
 	input.value = "";
 }
 
 void delete_element(element){
-	element.parent.remove();
-
+	//Delete element parent
 }

@@ -4,24 +4,15 @@ import 'dart:math' show Random;
 int myNumber = new Random().nextInt(100);
 
 void main(){
-	
-	InputElement input = querySelector("#number_guessed");
-	ButtonElement button = querySelector("#submit");
-	SpanElement span = querySelector("span");
+		
+	//Get input button and span from the DOM
 
 	button.onClick.listen((event){
 		span.text = "";
 		try {
 			var num = int.parse(input.value);
 			
-			if(num > myNumber)
-				display_result("C'est moins !");
-
-			else if(num < myNumber)
-				display_result("C'est plus !");
-
-			else
-				display_result("Bien joué !");
+			//Check the value of num and display the correct message
 		} catch(e){
 			display_result("Veuillez saisir un ENTIER !");
 		}
@@ -30,7 +21,6 @@ void main(){
 }
 
 void display_result(message){
-	SpanElement span = querySelector("span");
-	span.text = message;
-	querySelector("div").children.add(span);
+	//Create a span with the message and add it to the existing div 
+	
 }
